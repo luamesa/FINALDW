@@ -1,0 +1,101 @@
+.review-form-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
+  border: 2px solid #e2ecff;
+}
+
+h2 {
+  text-align: center;
+  color: #1e4db7;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+label {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #1a2e50;
+  display: block;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #bcd0ff;
+  background: #f7faff;
+  transition: 0.3s;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #1e4db7;
+  background: white;
+  outline: none;
+}
+
+.stars {
+  display: flex;
+  margin: 10px 0 20px;
+  gap: 8px;
+  justify-content: center;
+}
+
+.star {
+  font-size: 32px;
+  cursor: pointer;
+  color: #c7d3ff;
+  transition: 0.2s;
+}
+
+.star:hover,
+.star.active {
+  color: #1e4db7;
+  transform: scale(1.15);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: #1e4db7;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-primary:hover {
+  background: #163b8f;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  background: #dce6ff;
+  color: #1e4db7;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-secondary:hover {
+  background: #c7d4ff;
+}

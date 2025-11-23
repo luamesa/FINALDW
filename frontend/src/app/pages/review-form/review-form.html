@@ -1,0 +1,42 @@
+<div class="review-form-container">
+
+  <div class="card">
+    <h2>{{ isEditing ? "Editar Reseña" : "Nueva Reseña" }}</h2>
+
+    <label>Título / Nombre del Restaurante</label>
+    <input
+      type="text"
+      class="input"
+      [(ngModel)]="titulo"
+      placeholder="Ej: El Rancherito"
+    >
+
+    <label>Descripción</label>
+    <textarea
+      class="textarea"
+      [(ngModel)]="descripcion"
+      rows="4"
+      placeholder="Escribe tu experiencia..."
+    ></textarea>
+
+    <label>Calificación</label>
+    <div class="stars">
+      <ng-container *ngFor="let s of stars">
+        <span
+          class="star"
+          [class.active]="s <= calificacion"
+          (click)="setRating(s)"
+        >★</span>
+      </ng-container>
+    </div>
+
+    <button class="btn-primary" (click)="save()">
+      {{ isEditing ? "Actualizar" : "Guardar Reseña" }}
+    </button>
+
+    <button class="btn-secondary" routerLink="/reviews">
+      Cancelar
+    </button>
+  </div>
+
+</div>

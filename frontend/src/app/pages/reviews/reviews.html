@@ -1,0 +1,23 @@
+<div class="reviews-container">
+  <h2>Mis Reseñas</h2>
+  <p style="color:red">Cantidad de reseñas: {{ reviews.length }}</p>
+  
+
+  <button routerLink="/new-review" class="new-review-btn">
+    + Nueva Reseña
+  </button>
+
+  <div class="reviews-list">
+    <div class="review-card" *ngFor="let item of reviews">
+      <h3>{{ item.titulo }}</h3>
+      <p>{{ item.descripcion }}</p>
+
+      <div>
+        <span *ngFor="let s of getStars(item.calificacion)">⭐</span>
+      </div>
+
+      <button [routerLink]="['/edit-review', item._id]">Editar</button>
+      <button (click)="delete(item._id)">Eliminar</button>
+    </div>
+  </div>
+</div>
