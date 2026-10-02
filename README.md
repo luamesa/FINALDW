@@ -104,7 +104,7 @@ El frontend está desarrollado con Angular y utiliza:
 
 ## Autenticación
 
-El sistema utiliza JWT para autenticar a los usuarios.
+Los usuarios pueden gestionar únicamente las reseñas asociadas a su propia cuenta.
 
 Flujo general:
 
@@ -144,14 +144,15 @@ Cada reseña contiene:
 Las operaciones principales son:
 
 ```text
-GET     /reseñas
-GET     /reseñas/:id
-POST    /reseñas
-PUT     /reseñas/:id
-DELETE  /reseñas/:id
-```
+POST    /api/auth/register
+POST    /api/auth/login
 
-> Los nombres exactos de los endpoints deben verificarse con `reviewRoutes.js` antes de considerar esta sección definitiva.
+GET     /api/reviews
+GET     /api/reviews/:id
+POST    /api/reviews
+PUT     /api/reviews/:id
+DELETE  /api/reviews/:id
+```
 
 ## Configuración del proyecto
 
