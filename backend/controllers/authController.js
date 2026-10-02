@@ -33,7 +33,6 @@ exports.login = async (req, res) => {
     let ok = await bcrypt.compare(password, user.password);
     if (!ok) return res.status(400).json({ msg: "Credenciales incorrectas" });
 
-    console.log("JWT SECRET LOGIN:", process.env.JWT_SECRET);
     let token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "7d"
     });
