@@ -1,15 +1,29 @@
 # ReviewHub — Plataforma Full Stack de Reseñas
 
-Aplicación web Full Stack desarrollada con **Angular, TypeScript, Node.js, Express y MongoDB**, orientada a la gestión de reseñas de usuarios.
+Aplicación web **Full Stack** desarrollada con **Angular, TypeScript, Node.js, Express y MongoDB**, orientada a la gestión de reseñas de usuarios.
 
-El proyecto implementa autenticación mediante **JWT**, cifrado de contraseñas con **bcryptjs** y control de acceso para gestionar las reseñas asociadas a cada usuario.
+El proyecto implementa autenticación mediante **JWT**, protección de contraseñas con **bcryptjs** y control de acceso para que cada usuario pueda gestionar sus propias reseñas.
+
+## Objetivo del proyecto
+
+El objetivo de ReviewHub es desarrollar una aplicación web completa que integre un frontend desarrollado con Angular, un backend basado en una API REST y una base de datos MongoDB.
+
+El proyecto permite aplicar conceptos de:
+
+* Desarrollo Full Stack.
+* Arquitectura cliente-servidor.
+* APIs REST.
+* Autenticación y autorización.
+* Gestión de bases de datos.
+* Protección de rutas.
+* Desarrollo de interfaces web.
 
 ## Características
 
 * Registro de usuarios.
 * Inicio de sesión.
 * Autenticación mediante JWT.
-* Cifrado de contraseñas con bcryptjs.
+* Protección de contraseñas con bcryptjs.
 * Consulta de reseñas.
 * Consulta de una reseña específica.
 * Creación de reseñas.
@@ -64,7 +78,7 @@ El proyecto implementa autenticación mediante **JWT**, cifrado de contraseñas 
 El proyecto está dividido en dos aplicaciones principales:
 
 ```text
-ReviewHub/
+FINALDW/
 │
 ├── frontend/
 │   └── Angular + TypeScript
@@ -99,12 +113,12 @@ El frontend está desarrollado con Angular y utiliza:
 
 * `pages/` para las vistas de la aplicación.
 * `services/` para la comunicación con el backend.
-* `guards/` para protección de rutas.
+* `guards/` para la protección de rutas.
 * `interceptors/` para interceptar solicitudes HTTP.
 
 ## Autenticación
 
-Los usuarios pueden gestionar únicamente las reseñas asociadas a su propia cuenta.
+El sistema utiliza **bcryptjs** para proteger las contraseñas y **JWT** para gestionar la autenticación de los usuarios.
 
 Flujo general:
 
@@ -132,16 +146,16 @@ Los usuarios pueden gestionar únicamente las reseñas asociadas a su propia cue
 
 ## Gestión de reseñas
 
-Cada reseña contiene:
+Cada reseña contiene información relacionada con:
 
-* Título
-* Descripción
-* Calificación de 1 a 5
-* Usuario propietario
-* Fecha de creación
-* Fecha de actualización
+* Título.
+* Descripción.
+* Calificación de 1 a 5.
+* Usuario propietario.
+* Fecha de creación.
+* Fecha de actualización.
 
-Las operaciones principales son:
+### Principales endpoints
 
 ```text
 POST    /api/auth/register
@@ -248,7 +262,18 @@ FINALDW/
 
 Este proyecto fue desarrollado como parte del proceso académico de formación en desarrollo de software.
 
-Actualmente se utiliza como proyecto demostrativo para documentar conocimientos en desarrollo Full Stack, APIs, autenticación, bases de datos y desarrollo frontend con Angular.
+Actualmente se utiliza como proyecto demostrativo para documentar conocimientos en:
+
+* Desarrollo Full Stack.
+* Desarrollo de APIs REST.
+* Autenticación y autorización.
+* Bases de datos.
+* Desarrollo frontend con Angular.
+* Arquitectura cliente-servidor.
+
+## Estado
+
+🟢 **Proyecto académico — funcional como proyecto demostrativo.**
 
 ## Autor
 
