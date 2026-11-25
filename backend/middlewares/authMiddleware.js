@@ -5,8 +5,6 @@ module.exports = (req, res, next) => {
 
   if (!token) return res.status(401).json({ msg: "No autorizado" });
 
-    console.log("JWT SECRET MIDDLEWARE:", process.env.JWT_SECRET);
-console.log("TOKEN RECIBIDO:", token);
 
   try {
     let decoded = jwt.verify(token, process.env.JWT_SECRET);
